@@ -71,10 +71,21 @@ console.log(multiplyNums(2,4,multiply));
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
+  list.forEach(function(currentValue) {
+    if (currentValue == item ) {
+      return cb (true);
+    } else {
+      return cb (false);
+    }
+  })
 }
-function contains(item, list, cb) {
-  return cb(item, list)
-}
+contains('yo-yo', items, function(contained){
+    if (contained == true) {
+      console.log("It's true")
+    } else {
+      console.log("It's false")
+    }
+})
 
 
 /* STRETCH PROBLEM */

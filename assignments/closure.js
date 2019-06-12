@@ -1,6 +1,19 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
+function parent() {
+  console.log('I am the parent!');
 
+  function child() {
+    console.log('I am the child!');
+
+    function grandchild() {
+      console.log('I am the grandchild!');
+    }
+    grandchild();
+  }
+  child();
+}
+parent();
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
